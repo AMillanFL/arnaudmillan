@@ -1,0 +1,36 @@
+---
+title: "dire-bonjour"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{dire-bonjour}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(arnaudmillan)
+```
+
+# Function dire_bonjour
+
+Entree de la fonction :
+- un prenom : chaine de caracteres
+  + si non renseigne la variable prend la valeur 'toi'
+Sortie de la fonction :
+- un message disant "bonjour prénom"
+Dependances packages : glue, 
+
+```{r}
+
+
+dire_bonjour('Arnaud')
+dire_bonjour()
+```
+
