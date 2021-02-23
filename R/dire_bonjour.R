@@ -3,7 +3,7 @@
 #' @param prenom chaine de caracteres
 #'
 #' @importFrom glue glue
-#' @importFrom asserthat asserthat
+#' @importFrom assertthat assert_that is.string
 #'
 #' @return renvoie un message qui dit bonjour a quelqu'un
 #' @export
@@ -13,7 +13,9 @@
 #' dire_bonjour()
 dire_bonjour <- function(prenom = 'toi') {
   # teste si la variable prenom est bien une chaine de caracteres
-  assertthat::assert_that(is.character(prenom))
+  assert_that(is.character(prenom))
+  assert_that(is.string(prenom))
+
 
   # renvoie le message
   message(glue("Bonjour {prenom}"))
